@@ -1,0 +1,152 @@
+body {
+    font-family: Arial, sans-serif;
+    font-size:20px;
+    min-height: 100vh;
+    /* Set the display to flex and flex direction to column to create a flex container. */
+    display: flex;
+    flex-direction: column;  
+}
+/* grey border box  */
+  
+.container {
+    border: 4px double #ccc;
+    background-color: #fff;
+    padding: 20px;
+    max-width: 400px;
+    margin: 20px auto;
+  }
+
+  .title {
+    font-weight: bold;
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+
+  /* nav styles  */
+
+  nav {
+    background-color: #333; /* Set the background color to dark */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+  }
+  
+  .logo img {
+    height: 40px;
+  }
+  
+  ul.tabs {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+  }
+  
+  ul.tabs li {
+    margin-right: 10px;
+  }
+  
+  ul.tabs li a {
+    color: #fff; /* Set the text color to white */
+    text-decoration: none;
+    padding: 10px;
+  }
+  
+  ul.tabs li a:hover {
+    color: #ffcc00; /* Set the text color to a different color on hover */
+  }
+  
+
+  /* footer styles */
+
+
+  .dark-footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center; margin-top: auto; /* This pushes the footer to the bottom. */
+    width: 100%; /
+  }
+
+.icon-row a {
+  color: #EDDEA4;
+  font-size: 24px;
+  margin: 0 10px;
+}
+
+.copy-right {
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+
+
+/* */
+
+/* Add this CSS code to your Requirements.css file or embed it in a <style> tag in the <head> section */
+/* Add this CSS code to your Requirements.css file or embed it in a <style> tag in the <head> section */
+
+.dropdown-sections {
+    margin-top: 30px;
+  }
+  
+  .dropdown-section {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 10px;
+  }
+  
+  .dropdown-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    cursor: pointer;
+  }
+  
+  .dropdown-arrow {
+    font-size: 10px;
+  }
+  
+  .dropdown-content {
+    display: none;
+    padding: 10px;
+  }
+  
+  .dropdown-section.open .dropdown-content {
+    display: block;
+  }
+
+
+  /*  */
+
+
+  .missionStatement{
+    margin: 20px 10px 10px 10px;
+  }
+  
+  .scroll-to-top-btn {
+    display: none;
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background-color: #555;
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    font-size: 24px;
+    cursor: pointer;
+    outline: none;
+  }
+  
+  .scroll-to-top-btn i {
+    line-height: 50px;
+    text-align: center;
+  }
+  
+  .scroll-to-top-btn.show {
+    display: block;
+  }

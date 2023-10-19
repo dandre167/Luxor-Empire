@@ -1,0 +1,160 @@
+]<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Cards with Modal</title>
+    <style>
+        /* Styling for the card container */
+        .card-container {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr); /* Two columns */
+            gap: 10px; /* Adjust the spacing between cards */
+            justify-items: center;
+            align-items: center;
+            padding: 20px; /* Optional padding for the container */
+            margin: 0 auto; /* Center the container horizontally */
+            max-width: 600px; /* Adjust the maximum width as needed */
+        }
+
+        /* Styling for individual cards */
+        .card {
+            cursor: pointer;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+        }
+
+        /* Styling for the pop-up modal */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            justify-content: center;
+            align-items: center;
+        }
+
+        .modal-content {
+            background-color: #fff;
+            padding: 20px;
+            width: 80%;
+            max-width: 400px;
+            border-radius: 5px;
+            text-align: center;
+            position: relative;
+        }
+
+        /* Close button for the modal */
+        .close-btn {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            cursor: pointer;
+        }
+
+        /* Styling for images */
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="card-container">
+        <!-- Card 1 -->
+        <div class="card" onclick="openModal('Cadillac/frontCadillac.jpeg', 'Car 1 Details')">
+            <img src="Cadillac/frontCadillac.jpeg" alt="Cadillac">
+        </div>
+        
+        <!-- Card 2 -->
+        <div class="card" onclick="openModal('M4/FrontM4.jpeg', 'Car 2 Details')">
+            <img src="M4/FrontM4.jpeg" alt="M4">
+        </div>
+        
+        <!-- Card 3 -->
+        <div class="card" onclick="openModal('Urus/FrontUrus.jpeg', 'Car 3 Details')">
+            <img src="Urus/FrontUrus.jpeg" alt="Urus">
+        </div>
+    </div>
+
+    <!-- Modal for Car 1 -->
+    <div class="modal" id="carModal1" tabindex="-1" aria-labelledby="carModal1Label" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="carModal1Label">Car 1 Details</h5>
+                    <button type="button" class="close-btn" onclick="closeModal()">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <!-- Add detailed information about Car 1 here -->
+                    <p>Details about Car 1.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" onclick="closeModal()">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal for Car 2 -->
+    <div class="modal" id="carModal2" tabindex="-1" aria-labelledby="carModal2Label" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="carModal2Label">Car 2 Details</h5>
+                    <button type="button" class="close-btn" onclick="closeModal()">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <!-- Add detailed information about Car 2 here -->
+                    <p>Details about Car 2.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" onclick="closeModal()">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal for Car 3 -->
+    <div class="modal" id="carModal3" tabindex="-1" aria-labelledby="carModal3Label" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="carModal3Label">Car 3 Details</h5>
+                    <button type="button" class="close-btn" onclick="closeModal()">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <!-- Add detailed information about Car 3 here -->
+                    <p>Details about Car 3.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" onclick="closeModal()">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Function to open the modal and display the clicked image and details
+        function openModal(imagePath, title) {
+            var modal = document.getElementById('myModal');
+            var modalImage = document.getElementById('modalImage');
+            var modalTitle = document.getElementById('modalTitle');
+            
+            modal.style.display = 'block';
+            modalImage.src = imagePath;
+            modalTitle.innerText = title;
+        }
+
+        // Function to close the modal
+        function closeModal() {
+            var modal = document.getElementById('myModal');
+            modal.style.display = 'none';
+        }
+    </script>
+</body>
+</html>

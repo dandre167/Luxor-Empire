@@ -1,0 +1,150 @@
+
+/*font styles */
+@font-face {
+font-family: "CustomFont";
+src: url("CustomFont.eot");
+src: url("CustomFont.woff") format("woff"),
+url("CustomFont.otf") format("opentype"),
+url("CustomFont.svg#filename") format("svg");
+}
+
+/* Nav styles */
+nav {
+background-color: transparent;
+position: fixed;
+top: 0;
+left: 0;
+width: 100%;
+display: flex;
+justify-content: space-between;
+align-items: center;
+padding: 10px;
+z-index: 1000;
+transition: background-color 0.3s ease;
+}
+
+#cars.h3{
+font-size: 15px;
+}
+
+.nav-scrolled {
+background-color: rgba(242, 242, 242, 0.8);
+}
+
+.logo img {
+height: 95px;
+width: 95px;
+}
+
+.tabs li {
+display: inline;
+margin-left: 10px;
+}
+
+.tabs li a {
+text-decoration: none;
+color: #333;
+padding: 10px;
+}
+
+ul.tabs {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    } 
+
+ul.tabs li {
+    margin-right: 10px;
+    }
+    
+ul.tabs li a {
+    color: black;
+    text-decoration: none;
+    padding: 10px;
+    }
+    
+ul.tabs li a:hover {
+    color: #ffcc00;
+    }
+    
+
+
+/* image styles */
+
+
+.container {
+    width: 100%;
+  }
+
+  /* This code will be applied to devices with a width of 768px or less */
+  @media (max-width: 768px) {
+    .container {
+      width: 100%;
+    }
+  }
+        section{
+                padding-left: 25%;
+                color:white;
+        }
+
+
+
+/* Section button styles */
+
+.my-button {
+    background-color: #333;
+    color: #fff;
+    font-size: 16px;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .my-button:hover {
+    background-color: #fff;
+    color: #333;
+  }
+
+  
+  /* 
+
+
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 30px;
+  margin-bottom: 30px ;
+}
+
+.col {
+  width: 33%;
+  padding: 0 10px;
+}
+
+img {
+  max-width: 100%;
+  max-height: 100%;
+}
+*/
+
+/* footer styles */
+.dark-footer {
+    background-color: black;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+    width: 100%; 
+    }
+    
+    .icon-row a {
+    color: #EDDEA4;
+    font-size: 24px;
+    margin: 0 10px;
+    }
+    
+    .copy-right {
+    font-size: 14px;
+    margin-top: 10px;
+    }
